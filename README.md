@@ -1,7 +1,9 @@
 # goworker
 
-[![Build Status](https://travis-ci.org/benmanns/goworker.png?branch=master)](https://travis-ci.org/benmanns/goworker)
-[![GoDoc](https://godoc.org/github.com/benmanns/goworker?status.svg)](https://godoc.org/github.com/benmanns/goworker)
+[![Build Status](https://travis-ci.org/arxdsilva/goworker.png?branch=master)](https://travis-ci.org/arxdsilva/goworker)
+[![GoDoc](https://godoc.org/github.com/arxdsilva/goworker?status.svg)](https://godoc.org/github.com/arxdsilva/goworker)
+
+[ATTENTION] This is a fork of [goworker](https://github.com/benmanns/goworker) that aims to resume it's work.
 
 goworker is a Resque-compatible, Go-based background worker. It allows you to push jobs into a queue using an expressive language like Ruby while harnessing the efficiency and concurrency of Go to minimize job latency and cost.
 
@@ -12,13 +14,13 @@ goworker workers can run alongside Ruby Resque clients so that you can keep all 
 To install goworker, use
 
 ```sh
-go get github.com/benmanns/goworker
+go get github.com/arxdsilva/goworker
 ```
 
 to install the package, and then from your worker
 
 ```go
-import "github.com/benmanns/goworker"
+import "github.com/arxdsilva/goworker"
 ```
 
 ## Getting Started
@@ -42,7 +44,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/benmanns/goworker"
+	"github.com/arxdsilva/goworker"
 )
 
 func myFunc(queue string, args ...interface{}) error {
@@ -68,7 +70,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/benmanns/goworker"
+	"github.com/arxdsilva/goworker"
 )
 
 func newMyFunc(uri string) (func(queue string, args ...interface{}) error) {
@@ -97,7 +99,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/benmanns/goworker"
+	"github.com/arxdsilva/goworker"
 )
 
 func myFunc(queue string, args ...interface{}) error {
